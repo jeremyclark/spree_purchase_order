@@ -13,7 +13,7 @@ module SpreePurchaseOrder
       end
 
       def add_source_attributes
-        append_file 'config/initializers/spree.rb', "Spree::PermittedAttributes.source_attributes.push :po_number, :organization_name"
+        append_file 'config/initializers/spree.rb', "\nSpree::PermittedAttributes.source_attributes.push :po_number, :organization_name"
       end
 
       def add_migrations
